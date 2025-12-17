@@ -45,6 +45,41 @@
 │   ├── 07
 │   ├── 09
 ```
-5. Try the small, reproducible test set with `./run_nf.sh`
+5. Try the small, reproducible test set with `./run_nf.sh`. This should take >15 minutes:
+```
+executor >  local (10)
+[8d/477b40] TAIJI_BASIC_VERIFY_INPUT (1) [100%] 1 of 1 ✔
+[41/f63de1] TAIJI_MAKE_INPUTS (1)        [100%] 1 of 1 ✔
+[6e/43ea50] RUN_TAIJI (2)                [100%] 2 of 2 ✔
+[65/fc2e45] EXTRACT_NETWORK_FILES (2)    [100%] 2 of 2 ✔
+[8d/c6ba85] PREPROCESS_NETWORK (1)       [100%] 1 of 1 ✔
+[1b/a55e65] EXTRACT_PAGERANK_FILES (2)   [100%] 2 of 2 ✔
+[50/60ff9e] VISUALIZE_NETWORK            [100%] 1 of 1 ✔
+Found network file: /Users/eunicechoi/Documents/bioinformatics_resources/CHEM280/WI26/Taiji/work/65/fc2e45861c44240ce923b05fc4135b/ra999_edges_combined.csv
+Found PageRank file: /Users/eunicechoi/Documents/bioinformatics_resources/CHEM280/WI26/Taiji/work/1b/a55e65ff32880993b3d95bc1fcb56b/ra999_GeneRanks.tsv
+Completed at: 17-Dec-2025 15:52:09
+Duration    : 13m 42s
+CPU hours   : 0.4
+Succeeded   : 10
+
+```
+the output should look as so:
+```
+.
+├── figures
+│   └── pageranks.png
+├── filtered_edges_combined.csv
+├── oa1316_taiji_inputs
+│   ├── oa1316_config.yml
+│   ├── oa1316_input.tsv
+│   └── test_tmp
+├── ra999_taiji_inputs
+│   ├── ra999_config.yml
+│   ├── ra999_input.tsv
+│   └── test_tmp
+└── taiji_results
+    ├── oa1316
+    └── ra999
+```
    
    
