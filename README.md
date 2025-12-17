@@ -45,7 +45,7 @@
 │   ├── 07
 │   ├── 09
 ```
-5. Try the small, reproducible test set with `./run_nf.sh`. This should take >15 minutes:
+5. Try the small, reproducible test set with `./run_nf.sh`. This should take <15 minutes:
 ```
 executor >  local (10)
 [8d/477b40] TAIJI_BASIC_VERIFY_INPUT (1) [100%] 1 of 1 ✔
