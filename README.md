@@ -7,7 +7,7 @@
 
 # Running the pipeline 
 1. Ensure nextflow and docker are installed and in path
-2. Download reference files from this [drive]([url](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing)) (currently only have hg38)
+2. Download reference files from this [drive](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing) (currently only have hg38)
 3. Working directory should look as so:
 ```
    .
