@@ -13,7 +13,6 @@
    .
 ├── bin
 │   ├── 00_validate_input.sh
-│   ├── Active.tsv
 │   ├── taiji_wrapper-uniqueGen.py
 │   ├── test_regular_taiji_run.sh
 │   └── write_inputs.sh
