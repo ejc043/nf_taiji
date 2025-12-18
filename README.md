@@ -34,16 +34,7 @@
 ├── main.nf
 ├── nextflow.config
 ├── README.md
-├── regular_taiji_inputs
-│   ├── output
-│   ├── sciflow.db
-│   ├── taiji_small_sample.tsv
-│   └── test_config.yml
 ├── run_nf.sh
-├── work
-│   ├── 04
-│   ├── 07
-│   ├── 09
 ```
 5. Try the small, reproducible test set with :
    ```
