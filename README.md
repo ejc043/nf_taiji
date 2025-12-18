@@ -55,7 +55,9 @@
     --wd $(realpath .) 
    ```
    If there is an error, you can resume with cached files with `-resume`
-   <br>
+
+<br>
+
 `--system` can be `centos`,`macos`, or `ubuntu` depending on your local system
 <br>
 `--inputs` is your tab delimited, 8 column .tsv file with <u>absolute</u> paths to input files. RNA-seq and ATAC-seq are required while HiC is optional. Check the [documentation](https://taiji-pipeline.github.io/documentation/input.html) for more input options. I would recommend 1. `narrowPeaks` for ATAC-seq inputs, 2. 2 columned, tab-delimited text files for RNA-seq files, and 3. `bedpe` files for HiC. You can verify input file format in the small reproducible sample set in `data/*`
