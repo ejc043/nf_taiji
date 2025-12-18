@@ -77,7 +77,7 @@ CPU hours   : 0.4
 Succeeded   : 10
 
 ```
-the output should look as so:
+the output directory should look as so:
 ```
 .
 ├── figures
