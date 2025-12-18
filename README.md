@@ -45,7 +45,20 @@
 │   ├── 07
 │   ├── 09
 ```
-5. Try the small, reproducible test set with `./run_nf.sh`. This should take <15 minutes:
+5. Try the small, reproducible test set with :
+   `nextflow run main.nf \
+    --inputs 'data/taiji_small_sample.tsv' \
+    --output 'test_nextflow_output/' \
+    --genome 'hg38' \
+    --system 'macos' \
+    --wd $(realpath .) \
+    -resume `.
+`--system` can be `centos`,`macos`, or `ubuntu` depending on your local system
+`--inputs` is your tab delimited, 8 column .tsv file with <u>absolute</u> paths to input files. RNA-seq and ATAC-seq are required while HiC is optional. Check the [documentation](https://taiji-pipeline.github.io/documentation/input.html) for more input options.
+`--output` is your output directory.
+`--genome` is your reference files
+`--wd` is your working directory
+Running the small test set should take <15 minutes:
 ```
 executor >  local (10)
 [8d/477b40] TAIJI_BASIC_VERIFY_INPUT (1) [100%] 1 of 1 ✔
