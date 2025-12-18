@@ -46,13 +46,15 @@
 │   ├── 09
 ```
 5. Try the small, reproducible test set with :
-   ```nextflow run main.nf \
+   ```
+   nextflow run main.nf \
     --inputs 'data/taiji_small_sample.tsv' \
     --output 'test_nextflow_output/' \
     --genome 'hg38' \
     --system 'macos' \
     --wd $(realpath .) \
-    -resume ```
+    -resume
+   ```
 `--system` can be `centos`,`macos`, or `ubuntu` depending on your local system
 `--inputs` is your tab delimited, 8 column .tsv file with <u>absolute</u> paths to input files. RNA-seq and ATAC-seq are required while HiC is optional. Check the [documentation](https://taiji-pipeline.github.io/documentation/input.html) for more input options.
 `--output` is your output directory.
