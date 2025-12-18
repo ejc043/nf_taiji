@@ -64,7 +64,7 @@
 <br>
 `--output` is your output directory.
 <br>
-`--genome` is your reference files
+`--genome` is your reference. Currently, we only support hg38
 <br>
 `--wd` is your working directory
 <br>
