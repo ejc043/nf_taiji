@@ -54,7 +54,8 @@
     --system 'macos' \
     --wd $(realpath .) 
    ```
-   If there is an error, you can resume with cached files with `-resume` 
+   If there is an error, you can resume with cached files with `-resume`
+   <br>
 `--system` can be `centos`,`macos`, or `ubuntu` depending on your local system
 `--inputs` is your tab delimited, 8 column .tsv file with <u>absolute</u> paths to input files. RNA-seq and ATAC-seq are required while HiC is optional. Check the [documentation](https://taiji-pipeline.github.io/documentation/input.html) for more input options.
 `--output` is your output directory.
