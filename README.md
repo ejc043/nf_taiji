@@ -6,9 +6,10 @@
 4. filters network for most confident edges (edges shared by at least 10% samples) for downstream analysis by user
 
 # Running the pipeline 
-1. Ensure nextflow and docker are installed and in path. Check with `which nextflow` and `which docker`
-2. Download reference files from this [drive](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing) (currently only have hg38)
-3. Working directory should look as so:
+1. Ensure nextflow, git, and docker are installed and in path. Check with `which nextflow`,  `which docker`, and `which git`
+2. Pull this repo into your working directory : `git clone https://github.com/ejc043/nf_taiji.git`
+3. Download reference files from this [drive](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing) (currently only have hg38)
+4. Working directory should look as so:
 ```
    .
 ├── bin
