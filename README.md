@@ -8,8 +8,14 @@
 # Running the pipeline 
 1. Ensure nextflow, git, and docker are installed and in path. Check with `which nextflow`,  `which docker`, and `which git`
 2. Pull this repo into your working directory : `git clone https://github.com/ejc043/nf_taiji.git`
-3. Download reference files from this [drive](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing) (currently only have hg38)
-4. Working directory should look as so:
+3. Download reference files from this [drive](https://drive.google.com/drive/folders/1DlJm54MVIyoIfV_c5yBBzp0BI_vubVUZ?usp=sharing) (currently only have hg38). This drive includes:
+   ```
+   │   ├── binaries.zip (taiji binaries)
+   │   ├── data.zip (test data you'll first run to ensure the pipeline is working as expected)
+   │   ├── database.zip (reference files for hg38)
+   ```
+4. Unzip all files in your working dorectory.
+5. Working directory should look as so:
 ```
    .
 ├── bin
