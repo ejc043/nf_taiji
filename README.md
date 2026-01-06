@@ -33,8 +33,6 @@
 │   └── taiji_config_formulafile.yml
 ├── main.nf
 ├── nextflow.config
-├── README.md
-├── run_nf.sh
 ```
 5. Try the small, reproducible test set with :
    ```
