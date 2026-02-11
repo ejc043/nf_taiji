@@ -8,5 +8,6 @@ time nextflow run main.nf \
     --genome 'hg38' \
     --system 'singularity' \
     --wd $(realpath .) \
-    -profile slurm
+    -profile slurm \
+    -resume
 

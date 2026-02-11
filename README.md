@@ -19,6 +19,12 @@
 > [!NOTE]
 > If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow. 
 
+Please the download [dependencies](https://doi.org/10.5281/zenodo.18615384) in your current working directory (soft link should be OK). 
+
+Your working directory should look like this: 
+```bash 
+
+```
 <!-- TODO nf-core: Describe the minimum required steps to execute the pipeline, e.g. how to prepare samplesheets.
      Explain what rows and columns represent. For instance (please edit as appropriate):
 

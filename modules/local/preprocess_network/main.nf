@@ -10,7 +10,7 @@ process PREPROCESS_NETWORK {
     
     script:
     '''
-    num_samples=$(cat inputs | grep RNA-seq | wc -l)
+    num_samples=$(cat *tsv | grep RNA-seq | wc -l)
     lim=$((num_samples / 10))
 
     cat *_edges_combined.csv | awk -F"," '{print $1"_"$2}' | sort | uniq -c | awk -v threshold="$lim" '$1 >= threshold' | sed 's/^[[:space:]]*//' | awk '{print $1"\t"$2}' > parent_filt.csv
