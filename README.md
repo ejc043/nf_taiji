@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**choi/nftaiji** is a bioinformatics pipeline that ...
+**choi/nftaiji** takes one input file and runs taiji given a reference i.e. hg38. It can be run locally or on hpc cluster. 
 
 <!-- TODO nf-core:
    Complete this sentence with a 2-3 sentence summary of what types of data the pipeline ingests, a brief overview of the
@@ -40,10 +40,18 @@ Now, you can run the pipeline using:
 <!-- TODO nf-core: update the following command to include all required parameters for a minimal example -->
 
 ```bash
-nextflow run choi/nftaiji \
-   -profile <docker/singularity/.../institute> \
-   --input samplesheet.csv \
-   --outdir <OUTDIR>
+#!/bin/bash
+#SBATCH --mem 60G 
+#SBATCH --cpus-per-task=24 
+#SBATCH --job-name=nf-taiji
+time nextflow run main.nf \
+    --inputs 'data/taiji_small_sample.tsv' \
+    --output 'test_nextflow_output/' \
+    --genome 'hg38' \
+    --system 'singularity' \
+    --wd $(realpath .) \
+    -profile slurm
+
 ```
 
 > [!WARNING]
@@ -53,7 +61,6 @@ nextflow run choi/nftaiji \
 
 choi/nftaiji was originally written by Eunice Choi.
 
-We thank the following people for their extensive assistance in the development of this pipeline:
 
 <!-- TODO nf-core: If applicable, make list of people who have also contributed -->
 
