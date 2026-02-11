@@ -23,6 +23,31 @@ Please the download [dependencies](https://doi.org/10.5281/zenodo.18615384) in y
 
 Your working directory should look like this: 
 ```bash 
+.
+├── bin 
+├── binaries 
+├── data 
+├── database 
+├── main.nf
+├── modules
+│   └── local
+│       ├── extract_network_files
+│       │   └── main.nf
+│       ├── extract_pagerank_files
+│       │   └── main.nf
+│       ├── preprocess_network
+│       │   └── main.nf
+│       ├── run_taiji
+│       │   └── main.nf
+│       ├── run_taiji_singularity
+│       │   └── main.nf
+│       ├── taiji_make_inputs
+│       │   └── main.nf
+│       └── taiji_verify_input
+│           └── main.nf
+├── nextflow.config
+├── README.md
+├── run_nf.sh
 
 ```
 <!-- TODO nf-core: Describe the minimum required steps to execute the pipeline, e.g. how to prepare samplesheets.
@@ -58,6 +83,158 @@ time nextflow run main.nf \
     --wd $(realpath .) \
     -profile slurm
 
+```
+The output should look like this: 
+```bash
+.
+├── filtered_edges_combined.csv
+├── OA_02_taiji_inputs
+│   ├── OA_02_config.yml
+│   ├── OA_02_input.tsv
+│   └── test_tmp
+├── RA_11_taiji_inputs
+│   ├── RA_11_config.yml
+│   ├── RA_11_input.tsv
+│   └── test_tmp
+└── taiji_results
+    ├── OA_02
+    │   └── OA_02_taiji_inputs
+    │       └── OA_02_taiji_outputs
+    │           ├── ATACSeq
+    │           │   ├── Download
+    │           │   ├── openChromatin.bed.gz
+    │           │   └── TFBS
+    │           │       ├── ATAC-OA_02_rep1.bed.gz
+    │           │       ├── motif_sites_part.bed3575784-0.gz
+    │           │       ├── motif_sites_part.bed3575784-10.gz
+    │           │       ├── motif_sites_part.bed3575784-11.gz
+    │           │       ├── motif_sites_part.bed3575784-12.gz
+    │           │       ├── motif_sites_part.bed3575784-13.gz
+    │           │       ├── motif_sites_part.bed3575784-14.gz
+    │           │       ├── motif_sites_part.bed3575784-15.gz
+    │           │       ├── motif_sites_part.bed3575784-16.gz
+    │           │       ├── motif_sites_part.bed3575784-17.gz
+    │           │       ├── motif_sites_part.bed3575784-18.gz
+    │           │       ├── motif_sites_part.bed3575784-19.gz
+    │           │       ├── motif_sites_part.bed3575784-1.gz
+    │           │       ├── motif_sites_part.bed3575784-20.gz
+    │           │       ├── motif_sites_part.bed3575784-21.gz
+    │           │       ├── motif_sites_part.bed3575784-22.gz
+    │           │       ├── motif_sites_part.bed3575784-23.gz
+    │           │       ├── motif_sites_part.bed3575784-24.gz
+    │           │       ├── motif_sites_part.bed3575784-25.gz
+    │           │       ├── motif_sites_part.bed3575784-26.gz
+    │           │       ├── motif_sites_part.bed3575784-27.gz
+    │           │       ├── motif_sites_part.bed3575784-28.gz
+    │           │       ├── motif_sites_part.bed3575784-29.gz
+    │           │       ├── motif_sites_part.bed3575784-2.gz
+    │           │       ├── motif_sites_part.bed3575784-30.gz
+    │           │       ├── motif_sites_part.bed3575784-31.gz
+    │           │       ├── motif_sites_part.bed3575784-32.gz
+    │           │       ├── motif_sites_part.bed3575784-33.gz
+    │           │       ├── motif_sites_part.bed3575784-34.gz
+    │           │       ├── motif_sites_part.bed3575784-35.gz
+    │           │       ├── motif_sites_part.bed3575784-36.gz
+    │           │       ├── motif_sites_part.bed3575784-37.gz
+    │           │       ├── motif_sites_part.bed3575784-38.gz
+    │           │       ├── motif_sites_part.bed3575784-39.gz
+    │           │       ├── motif_sites_part.bed3575784-3.gz
+    │           │       ├── motif_sites_part.bed3575784-40.gz
+    │           │       ├── motif_sites_part.bed3575784-41.gz
+    │           │       ├── motif_sites_part.bed3575784-42.gz
+    │           │       ├── motif_sites_part.bed3575784-43.gz
+    │           │       ├── motif_sites_part.bed3575784-44.gz
+    │           │       ├── motif_sites_part.bed3575784-4.gz
+    │           │       ├── motif_sites_part.bed3575784-5.gz
+    │           │       ├── motif_sites_part.bed3575784-6.gz
+    │           │       ├── motif_sites_part.bed3575784-7.gz
+    │           │       ├── motif_sites_part.bed3575784-8.gz
+    │           │       └── motif_sites_part.bed3575784-9.gz
+    │           ├── GeneRanks_PValues.tsv
+    │           ├── GeneRanks.tsv
+    │           ├── Network
+    │           │   └── OA_02
+    │           │       ├── edges_binding.csv
+    │           │       ├── edges_combined.csv
+    │           │       └── nodes.csv
+    │           ├── RNASeq
+    │           │   ├── Download
+    │           │   ├── expression_profile.tsv
+    │           │   └── RNA-OA_02_rep1_gene_quant.tsv
+    │           └── SCATACSeq
+    │               ├── Feature
+    │               │   ├── Gene
+    │               │   └── Peak
+    │               └── Spectral
+    └── RA_11
+        └── RA_11_taiji_inputs
+            └── RA_11_taiji_outputs
+                ├── ATACSeq
+                │   ├── Download
+                │   ├── openChromatin.bed.gz
+                │   └── TFBS
+                │       ├── ATAC-RA_11_rep1.bed.gz
+                │       ├── motif_sites_part.bed197566-0.gz
+                │       ├── motif_sites_part.bed197566-10.gz
+                │       ├── motif_sites_part.bed197566-11.gz
+                │       ├── motif_sites_part.bed197566-12.gz
+                │       ├── motif_sites_part.bed197566-13.gz
+                │       ├── motif_sites_part.bed197566-14.gz
+                │       ├── motif_sites_part.bed197566-15.gz
+                │       ├── motif_sites_part.bed197566-16.gz
+                │       ├── motif_sites_part.bed197566-17.gz
+                │       ├── motif_sites_part.bed197566-18.gz
+                │       ├── motif_sites_part.bed197566-19.gz
+                │       ├── motif_sites_part.bed197566-1.gz
+                │       ├── motif_sites_part.bed197566-20.gz
+                │       ├── motif_sites_part.bed197566-21.gz
+                │       ├── motif_sites_part.bed197566-22.gz
+                │       ├── motif_sites_part.bed197566-23.gz
+                │       ├── motif_sites_part.bed197566-24.gz
+                │       ├── motif_sites_part.bed197566-25.gz
+                │       ├── motif_sites_part.bed197566-26.gz
+                │       ├── motif_sites_part.bed197566-27.gz
+                │       ├── motif_sites_part.bed197566-28.gz
+                │       ├── motif_sites_part.bed197566-29.gz
+                │       ├── motif_sites_part.bed197566-2.gz
+                │       ├── motif_sites_part.bed197566-30.gz
+                │       ├── motif_sites_part.bed197566-31.gz
+                │       ├── motif_sites_part.bed197566-32.gz
+                │       ├── motif_sites_part.bed197566-33.gz
+                │       ├── motif_sites_part.bed197566-34.gz
+                │       ├── motif_sites_part.bed197566-35.gz
+                │       ├── motif_sites_part.bed197566-36.gz
+                │       ├── motif_sites_part.bed197566-37.gz
+                │       ├── motif_sites_part.bed197566-38.gz
+                │       ├── motif_sites_part.bed197566-39.gz
+                │       ├── motif_sites_part.bed197566-3.gz
+                │       ├── motif_sites_part.bed197566-40.gz
+                │       ├── motif_sites_part.bed197566-41.gz
+                │       ├── motif_sites_part.bed197566-42.gz
+                │       ├── motif_sites_part.bed197566-43.gz
+                │       ├── motif_sites_part.bed197566-44.gz
+                │       ├── motif_sites_part.bed197566-4.gz
+                │       ├── motif_sites_part.bed197566-5.gz
+                │       ├── motif_sites_part.bed197566-6.gz
+                │       ├── motif_sites_part.bed197566-7.gz
+                │       ├── motif_sites_part.bed197566-8.gz
+                │       └── motif_sites_part.bed197566-9.gz
+                ├── GeneRanks_PValues.tsv
+                ├── GeneRanks.tsv
+                ├── Network
+                │   └── RA_11
+                │       ├── edges_binding.csv
+                │       ├── edges_combined.csv
+                │       └── nodes.csv
+                ├── RNASeq
+                │   ├── Download
+                │   ├── expression_profile.tsv
+                │   └── RNA-RA_11_rep1_gene_quant.tsv
+                └── SCATACSeq
+                    ├── Feature
+                    │   ├── Gene
+                    │   └── Peak
+                    └── Spectral
 ```
 
 > [!WARNING]
