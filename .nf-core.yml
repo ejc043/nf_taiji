@@ -4,16 +4,6 @@ nf_core_version: 3.5.1
 
 lint:
   files_unchanged:
-    - .github/CONTRIBUTING.md
-    - .github/PULL_REQUEST_TEMPLATE.md
-    - LICENSE
-    - .prettierignore
-    - .prettierignore
-    - .github/CONTRIBUTING.md
-    - .github/CONTRIBUTING.md
-    - assets/sendmail_template.txt
-    - .prettierignore
-    - .prettierignore
     - CODE_OF_CONDUCT.md
     - assets/nf-core-nftaiji_logo_light.png
     - docs/images/nf-core-nftaiji_logo_light.png
@@ -23,6 +13,13 @@ lint:
     - .github/PULL_REQUEST_TEMPLATE.md
     - assets/email_template.txt
     - docs/README.md
+    - .github/CONTRIBUTING.md
+    - .github/CONTRIBUTING.md
+    - assets/sendmail_template.txt
+    - .prettierignore
+    - .prettierignore
+    - LICENSE
+    - .prettierignore
     - .github/ISSUE_TEMPLATE/bug_report.yml
     - .github/ISSUE_TEMPLATE/config.yml
     - .github/ISSUE_TEMPLATE/feature_request.yml
@@ -33,21 +30,52 @@ lint:
     - .github/CONTRIBUTING.md
     - .github/.dockstore.yml
     - .prettierignore
+    - .github/CONTRIBUTING.md
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .prettierignore
   modules_config: false
   nextflow_config: false
   nf_test_content: false
   multiqc_config: false
   files_exist:
-    - CITATIONS.md
+    - nextflow_schema.json
+    - CODE_OF_CONDUCT.md
+    - assets/nf-core-nftaiji_logo_light.png
+    - docs/images/nf-core-nftaiji_logo_light.png
+    - docs/images/nf-core-nftaiji_logo_dark.png
+    - .github/ISSUE_TEMPLATE/config.yml
+    - .github/workflows/awstest.yml
+    - .github/workflows/awsfulltest.yml
+    - docs/output.md
+    - docs/README.md
+    - docs/usage.md
+    - .prettierignore
+    - .prettierrc.yml
+    - CHANGELOG.md
+    - assets/multiqc_config.yml
+    - conf/igenomes.config
+    - LICENSE
+    - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/ISSUE_TEMPLATE/feature_request.yml
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/CONTRIBUTING.md
+    - .github/.dockstore.yml
     - conf/igenomes.config
     - conf/igenomes_ignored.config
+    - CITATIONS.md
+    - conf/base.config
+    - conf/modules.config
+    - modules.json
     - conf/test.config
     - conf/test_full.config
     - .github/workflows/nf-test.yml
     - .github/actions/get-shards/action.yml
     - .github/actions/nf-test/action.yml
-    - LICENSE
-    - CHANGELOG.md
+    - .github/workflows/nf-test.yml
+    - .github/actions/get-shards/action.yml
+    - .github/actions/nf-test/action.yml
+    - nf-test.config
+    - tests/default.nf.test
     - .github/workflows/branch.yml
     - .github/workflows/nf-test.yml
     - .github/actions/get-shards/action.yml
@@ -57,38 +85,10 @@ lint:
     - assets/email_template.html
     - assets/sendmail_template.txt
     - assets/email_template.txt
-    - nextflow_schema.json
-    - assets/multiqc_config.yml
-    - .prettierignore
-    - .prettierrc.yml
-    - conf/igenomes.config
-    - .github/workflows/nf-test.yml
-    - .github/actions/get-shards/action.yml
-    - .github/actions/nf-test/action.yml
-    - nf-test.config
-    - tests/default.nf.test
-    - CODE_OF_CONDUCT.md
-    - assets/nf-core-nftaiji_logo_light.png
-    - docs/images/nf-core-nftaiji_logo_light.png
-    - docs/images/nf-core-nftaiji_logo_dark.png
-    - .github/ISSUE_TEMPLATE/config.yml
-    - .github/workflows/awstest.yml
-    - .github/workflows/awsfulltest.yml
-    - .github/ISSUE_TEMPLATE/bug_report.yml
-    - .github/ISSUE_TEMPLATE/feature_request.yml
-    - .github/PULL_REQUEST_TEMPLATE.md
-    - .github/CONTRIBUTING.md
-    - .github/.dockstore.yml
-    - docs/output.md
-    - docs/README.md
-    - docs/usage.md
-    - conf/base.config
-    - conf/modules.config
-    - modules.json
   readme:
     - nextflow_badge
-    - nfcore_template_badge
     - nextflow_badge
+    - nfcore_template_badge
   nfcore_components: false
   schema_lint: false
   schema_params: false
@@ -100,7 +100,7 @@ lint:
 template:
   org: choi
   name: nftaiji
-  description: 'run taiji '
+  description: run taiji
   author: Eunice Choi
   version: 1.0.0dev
   force: true
