@@ -1,32 +1,15 @@
-# Nextflow work directory
 work/
 .nextflow*
-
-# Output directories
 outputs/
 test_nextflow_output/
 *_taiji_outputs/
 *_taiji_inputs/
-
-# Large binary files
 binaries/*.sif
 binaries/taiji-*
-
-# Data files
 data/*.bam
 data/*.fastq*
-data/*.bai
-
-# Database files (if large)
 database/*/*.fa
 database/*/*.gtf
 database/*/*.index
 database/*/*.meme
-
-# Keep small example data
-!data/taiji_small_sample.tsv
-
-# System files
 .DS_Store
-*.swp
-*~
