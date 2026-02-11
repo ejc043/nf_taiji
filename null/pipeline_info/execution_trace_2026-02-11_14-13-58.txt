@@ -1,0 +1,4 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+2	5e/96c02b	3890266	TAIJI_BASIC_VERIFY_INPUT (1)	COMPLETED	0	2026-02-11 14:13:59.854	332ms	15ms	125.2%	0	0	163.8 KB	2.9 KB
+1	b2/ddab44	3890261	TAIJI_MAKE_INPUTS (1)	COMPLETED	0	2026-02-11 14:13:59.804	639ms	297ms	13.0%	7.1 MB	37.3 MB	170.2 KB	7.9 KB
+3	1a/2de9a2	3890541	RUN_TAIJI_SINGULARITY (1)	FAILED	255	2026-02-11 14:14:00.591	378ms	225ms	-	-	-	-	-
