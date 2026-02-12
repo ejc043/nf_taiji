@@ -65,7 +65,17 @@ CONTROL_REP1,AEG588A1_S1_L002_R1_001.fastq.gz,AEG588A1_S1_L002_R2_001.fastq.gz
 Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
 
 -->
-
+The input file looks something like this: 
+```bash
+type    id      group   rep     path    tags    format  cohort
+HiC     HiC_OA_02       OA_02   1       /data/OA_02_hicloops_chr22.bedpe   ChromosomeLoop          OA
+HiC     HiC_RA_11       RA_11   1       /data/RA_11_hicloops_chr22.bedpe   ChromosomeLoop          RA
+RNA-seq RNA-OA_02       OA_02   1       /data/OA_02_RNA.tsv        GeneQuant               OA
+RNA-seq RNA-RA_11       RA_11   1       /data/RA_11_RNA.tsv        GeneQuant               RA
+ATAC-seq        ATAC-OA_02      OA_02   1      /data/OA_02_REP1.mLb.clN_peaks_small.narrowPeak            NarrowPeak      OA
+ATAC-seq        ATAC-RA_11      RA_11   1       /data/RA_11_REP1.mLb.clN_peaks_small.narrowPeak            NarrowPeak      RA
+```
+Minimally, you only need RNA-seq and ATAC-seq (or ChipSeq). Make sure you input the absolute path in the `path` column. 
 Now, you can run the pipeline using:
 
 <!-- TODO nf-core: update the following command to include all required parameters for a minimal example -->
