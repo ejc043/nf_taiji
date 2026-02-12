@@ -84,6 +84,7 @@ time nextflow run main.nf \
     -profile slurm
 
 ```
+`system` is set for the binary that runs taiji and can be set to `singularity`, `macos`, `centos`, `ubuntu`. `profile` can be set to `slurm` for distributed runs or `local` if you're running it locally. 
 The test dataset will take ~15 minutes to run. The output should look like this: 
 ```bash
 .
