@@ -84,7 +84,7 @@ time nextflow run main.nf \
     -profile slurm
 
 ```
-The output should look like this: 
+The test dataset will take ~15 minutes to run. The output should look like this: 
 ```bash
 .
 ├── filtered_edges_combined.csv
