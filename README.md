@@ -76,6 +76,9 @@ ATAC-seq        ATAC-OA_02      OA_02   1      /data/OA_02_REP1.mLb.clN_peaks_sm
 ATAC-seq        ATAC-RA_11      RA_11   1       /data/RA_11_REP1.mLb.clN_peaks_small.narrowPeak            NarrowPeak      RA
 ```
 Minimally, you only need RNA-seq and ATAC-seq (or ChipSeq). Make sure you input the absolute path in the `path` column. 
+`HiC` type: 6 column bedpe file with chromatin contact information. 
+`RNA-seq` type: 2 column tsv file where first column is gene name and second column is normalized count. 
+`ATAC-seq` type: narrowpeaks (can be called from macs3) tend to be the most reliable. 
 Now, you can run the pipeline using:
 
 <!-- TODO nf-core: update the following command to include all required parameters for a minimal example -->
